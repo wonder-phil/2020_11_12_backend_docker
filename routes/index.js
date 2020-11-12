@@ -3,9 +3,6 @@ const router = express.Router();
 
 function no_cors_setup(res) {
 
-  //Access-Control-Allow-Origin
-  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
-  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Origin', '*');
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -31,7 +28,7 @@ var index = 0;
 
 /*
  *
- * curl http://localhost:3001/btc_date_equal?date=2020-05
+ * curl http://localhost:3010/get_backend_data
 */
 router.get('/get_backend_data', async (req,res, next) => {
   no_cors_setup(res);
